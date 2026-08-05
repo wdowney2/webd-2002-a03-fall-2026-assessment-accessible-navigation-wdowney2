@@ -1,4 +1,4 @@
-# Accessible Navigation
+# Accessible Navigation (10%)
 
 In this assessment, you will build a responsive, accessible global navigation component from the provided Figma file. Working from the Figma and starter files, you will write the HTML and CSS to implement the navigation across multiple screen sizes and apply JavaScript to bring the interactive patterns to life. At narrow and wide views, the navigation should have full support for keyboard, mouse (pointer), and touch input.
 
@@ -10,6 +10,7 @@ Your solution must include a working skip link, correct semantic landmarks and H
 
 Figma and Starter Files
 -   The starter and Figma files will be available on GitHub. Please fork the starter and Figma files from this link in Brightspace.
+
 -   The Figma is the complete visuals for both viewports, including colours, typography, spacing, layout, and focus styles. The starter files include the base menu HTML and the narrow viewport CSS. The navigation should match the Figma file as closely as possible.
 
 Your navigation must include the following:
@@ -22,6 +23,7 @@ Your navigation must include the following:
 -   Touch and pointer support
 -   Code comments
 
+
 ## SUBMISSION
 
 You must submit the following to Brightspace by the due date and time:
@@ -30,6 +32,7 @@ You must submit the following to Brightspace by the due date and time:
 from the original repostitory.
 
 Late submissions will **not** be accepted. See Digital Design’s Assessment Extension Guidelines
+
 
 ## ACADEMIC INTEGRITY
 
@@ -43,7 +46,9 @@ Ensure all required code comments have been included.
 
 Push your completed assessment to GitHub repository (this repo should be forked from the original) and the link submitted to Brightspace before the due date and time. Late pushes will be counted as late submissions and will not be accepted unless prior arrangements have been made. See Digital Design's Assessment Extension Guideline.
 
-## Rubric 
+
+## Rubric (total 42)
+
 - Skip link (2)
 - Visual Design (2)
 - Semantic Structure & ARIA Landmarks (2)
