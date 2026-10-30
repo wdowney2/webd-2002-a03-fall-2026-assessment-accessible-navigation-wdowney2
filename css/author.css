@@ -3,7 +3,7 @@
    WEBD2002 Accessible Web Design | author.css
 
    Name: 
-   Github Username:
+   Github Username: wdowney2
   
    Add your accessibility styles here.
    This file is loaded after styles.css, so your rules will override or extend the base 
@@ -15,11 +15,20 @@
 
    ===================================================================================== */
 
-   /** just so you can see the items - this will need to changed **/
-   header,
-   header svg  {
-      color: #efefef; 
-   }
-   .chevron {
-      fill: #efefef;
-   }
+/** just so you can see the items - this will need to changed **/
+header,
+header svg {
+   color: #efefef;
+}
+
+.chevron {
+   fill: #efefef;
+}
+
+ul {
+   display: flex;
+}
+ul ul {
+   display: flex;
+   flex-direction: column;
+}
