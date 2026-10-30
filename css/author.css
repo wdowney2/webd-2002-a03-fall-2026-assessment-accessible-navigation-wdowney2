@@ -28,7 +28,20 @@ header svg {
 ul {
    display: flex;
 }
+
 ul ul {
    display: flex;
    flex-direction: column;
+}
+
+/** ––– Skip link ––– **/
+.skip-to-content {
+   position: absolute;
+   top: -10000rem;
+   left: -10000rem;
+}
+
+.skip-to-content:focus {
+   top: .5rem;
+   left: .5rem;
 }
