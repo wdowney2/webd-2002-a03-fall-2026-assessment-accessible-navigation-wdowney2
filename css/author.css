@@ -30,10 +30,9 @@ header nav {
    position: absolute;
    top: 76px;
    left: 100vw;
-   height: calc(100vh - 76px);
+   min-height: calc(100vh - 76px);
    display: none;
    /* this makes the manu invisible to assistive technologies, which is good, because it's hidden */
-   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 header nav:not([hidden]) {
@@ -101,6 +100,7 @@ nav .nav-trigger {
 
 .chevron {
    color: #a1a1a1;
+   transform: rotate(180deg);
 }
 
 nav .nav-trigger[aria-expanded="true"] {
@@ -108,7 +108,7 @@ nav .nav-trigger[aria-expanded="true"] {
 }
 
 nav .nav-trigger[aria-expanded="true"] .chevron {
-   transform: rotate(180deg);
+   transform: rotate(0deg);
 }
 
 .nav-item>.nav-trigger,
@@ -132,7 +132,58 @@ nav .nav-trigger[aria-expanded="true"] .chevron {
    color: var(--item-clr);
 }
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+   header nav {
+      display: initial;
+      background-color: initial;
+      position: initial;
+      top: initial;
+      left: initial;
+      min-height: initial;
+      width: initial;
+   }
+
+   .nav-list {
+      flex-direction: initial;
+   }
+
+   .nav-item>.nav-trigger {
+      justify-content: initial;
+      gap: .4rem;
+   }
+
+   .nav-item>.nav-trigger,
+   .nav-item>a {
+      padding: .6rem 1rem;
+      border-top: none;
+   }
+
+   .nav-item {
+      position: relative;
+   }
+
+   .mega-panel {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+   }
+
+   .mega-panel .chevron,
+   .mega-panel .nav-trigger[aria-expanded="true"] .chevron {
+      transform: rotate(90deg);
+   }
+
+   .nav-item>.nav-trigger[aria-expanded="true"] {
+      background-color: initial;
+      border-bottom: .1875rem solid var(--item-clr);
+      color: var(--item-clr);
+      padding-bottom: .4125rem;
+   }
+
+   .nav-item .nav-trigger[aria-expanded="true"] .chevron {
+      color: var(--item-clr);
+   }
+}
 
 /** ––– Skip link ––– **/
 .skip-to-content {
