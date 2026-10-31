@@ -9,7 +9,7 @@
 
     function closeAllExcept(exceptTrigger) {
         triggers.forEach((trigger) => {
-            if (trigger !== exceptTrigger && trigger.getAttribute("aria-expanded") === "true") {
+            if (trigger !== exceptTrigger && trigger.getAttribute("aria-expanded") === "true" && trigger.contains(exceptTrigger)) { /* I'm very curious to see how the others make the menu function if I had to write Javascript we haven't learned yet to make it work */
                 setOpen(trigger, panelFor(trigger), false);
             }
         });
@@ -60,7 +60,6 @@
         triggers.forEach((trigger) => {
             const panel = panelFor(trigger);
             const clickedOutside = !trigger.contains(event.target) && !panel.contains(event.target);
-            console.log(`Clicked outside = ${clickedOutside} for trigger/panel id ${trigger.getAttribute("aria-controls")}`);
             if (clickedOutside && trigger.getAttribute("aria-expanded") === "true") {
                 setOpen(trigger, panel, false);
             }
