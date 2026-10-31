@@ -40,9 +40,9 @@
         <ul class="nav-list">
 
           <!-- Paints -->
-          <li class="nav-item">
+          <li class="nav-item nav-paints">
             <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="mega-paints">
-              Paints
+              <span>Paints</span>
               <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9" />
               </svg>
@@ -53,13 +53,13 @@
 
               <li>
                 <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="submenu-acrylic">
-                  Acrylic Paints
+                  <span>Acrylic Paints</span>
                   <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </button>
 
-                <ul id="submenu-acrylic">
+                <ul id="submenu-acrylic" hidden>
                   <li><a href="#">Heavy Body Acrylics</a></li>
                   <li><a href="#">Soft Body Acrylics</a></li>
                   <li><a href="#">Fluid Acrylics</a></li>
@@ -79,7 +79,7 @@
 
           <!-- Drawing -->
 
-          <!-- <li class="nav-item">
+          <!-- <li class="nav-item nav-drawing">
             <a href="#">Drawing</a>
             <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9" />
@@ -113,11 +113,11 @@
           </li> -->
 
           <!-- Surfaces -->
-          <!-- <li class="nav-item"><a href="#">Surfaces</a></li> -->
+          <!-- <li class="nav-item nav-surfaces"><a href="#">Surfaces</a></li> -->
 
 
           <!-- Tools -->
-          <!-- <li class="nav-item">
+          <!-- <li class="nav-item nav-tools">
             <a href="#">Tools</a>
             <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9" />
@@ -146,9 +146,9 @@
             </ul>
           </li>
 
-          <li class="nav-item"><a href="#">Studio</a></li>
+          <li class="nav-item nav-studio"><a href="#">Studio</a></li>
 
-          <li class="nav-item"><a href="#">Sale</a></li> -->
+          <li class="nav-item nav-sale"><a href="#">Sale</a></li> -->
         </ul>
       </nav>
 
@@ -173,7 +173,7 @@
         </button>
 
         <!-- Hamburger: mobile only -->
-        <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="main-nav" aria-label="Expand menu">
+        <button type="button" class="nav-trigger nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Expand menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>

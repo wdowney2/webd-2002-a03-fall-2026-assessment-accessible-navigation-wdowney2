@@ -24,7 +24,10 @@
     }
 
     function initDisclosure(trigger, panel) {
-        const item = trigger.closest(".nav-item");
+        let item = trigger.closest(".nav-item");
+        if (!item) {
+            item = panelFor(trigger);
+        }
 
         trigger.addEventListener("click", () => {
             const isOpen = trigger.getAttribute("aria-expanded") === "true";
@@ -36,21 +39,12 @@
             }
         });
 
-        if (item) {
-            item.addEventListener("keydown", (event) => {
-                if (event.key === "Escape" && trigger.getAttribute("aria-expanded") === "true") {
-                    setOpen(trigger, panel, false);
-                    trigger.focus();
-                }
-            });
-        } else if (trigger.getAttribute("aria-controls") === "main-nav") {
-            trigger.addEventListener("keydown", (event) => {
-                if (event.key === "Escape" && trigger.getAttribute("aria-expanded") === "true") {
-                    setOpen(trigger, panel, false);
-                    trigger.focus();
-                }
-            });
-        }
+        item.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && trigger.getAttribute("aria-expanded") === "true") {
+                setOpen(trigger, panel, false);
+                trigger.focus();
+            }
+        });
     }
 
     triggers.forEach((trigger) => initDisclosure(trigger, panelFor(trigger)));
