@@ -18,7 +18,7 @@
 /** just so you can see the items - this will need to changed **/
 header,
 header svg {
-   color: #efefef;
+   color: #e2e2e2;
 }
 
 
@@ -219,9 +219,11 @@ nav .nav-trigger[aria-expanded="true"] .chevron {
       background-color: var(--item-bg);
    }
 
-   .nav-item .nav-trigger .chevron {
+   .mega-panel .nav-trigger .chevron,
+   .nav-item>.nav-trigger:is([aria-expanded="true"], :hover, :focus) .chevron {
       color: var(--item-clr);
    }
+
 }
 
 /** ––– Skip link ––– **/
@@ -240,6 +242,13 @@ nav .nav-trigger[aria-expanded="true"] .chevron {
 
 :is(.nav-item>:is(.nav-trigger, a), .inner-container>a, .nav-actions>button, .skip-to-content):focus-visible {
    outline: 2px solid #fff;
+}
+
+.btn-primary:focus-visible {
+   /* I swear this had a focus outline when I downloaded these files... */
+   outline: 3px solid var(--red);
+   border: 3px solid var(--red);
+   transform: translateY(-3px);
 }
 
 /* Nukes all animations easier and more reliably than turning them off per-element */
