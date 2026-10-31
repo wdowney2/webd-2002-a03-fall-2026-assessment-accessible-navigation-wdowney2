@@ -164,8 +164,37 @@ nav .nav-trigger[aria-expanded="true"] .chevron {
 
    .mega-panel {
       position: absolute;
-      top: 100%;
+      top: calc(100% + 1rem);
       left: 50%;
+      border-top: .1875rem solid var(--item-clr);
+      background-color: #fff;
+      color: var(--charcoal);
+      width: max-content;
+   }
+
+   .mega-panel li {
+      position: relative;
+   }
+
+   .mega-panel,
+   .mega-panel ul {
+      border-radius: 0.1875rem;
+   }
+
+   .mega-panel ul {
+      border-left: .1875rem solid var(--item-clr);
+      padding: 0;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      width: max-content;
+      background-color: #fff;
+      color: var(--charcoal);
+   }
+
+   .mega-panel ul li {
+      border-left: none;
+      position: relative;
    }
 
    .mega-panel .chevron,
@@ -173,14 +202,24 @@ nav .nav-trigger[aria-expanded="true"] .chevron {
       transform: rotate(90deg);
    }
 
-   .nav-item>.nav-trigger[aria-expanded="true"] {
+   .mega-panel .nav-trigger:is([aria-expanded="true"], :hover, :focus) {
+      background-color: initial;
+   }
+
+   .nav-item>:is(.nav-trigger, a):is([aria-expanded="true"], :hover, :focus) {
       background-color: initial;
       border-bottom: .1875rem solid var(--item-clr);
       color: var(--item-clr);
       padding-bottom: .4125rem;
    }
 
-   .nav-item .nav-trigger[aria-expanded="true"] .chevron {
+   .mega-panel ul li:is(:hover, :focus),
+   .mega-panel .nav-trigger[aria-expanded="true"] {
+      color: var(--item-text);
+      background-color: var(--item-bg);
+   }
+
+   .nav-item .nav-trigger .chevron {
       color: var(--item-clr);
    }
 }
@@ -190,6 +229,8 @@ nav .nav-trigger[aria-expanded="true"] .chevron {
    position: absolute;
    top: -10000rem;
    left: -10000rem;
+   color: white;
+   background-color: var(--charcoal);
 }
 
 .skip-to-content:focus {
@@ -197,6 +238,9 @@ nav .nav-trigger[aria-expanded="true"] .chevron {
    left: .5rem;
 }
 
+:is(.nav-item>:is(.nav-trigger, a), .inner-container>a, .nav-actions>button, .skip-to-content):focus-visible {
+   outline: 2px solid #fff;
+}
 
 /* Nukes all animations easier and more reliably than turning them off per-element */
 @media screen and (prefers-reduced-motion: reduce) {
