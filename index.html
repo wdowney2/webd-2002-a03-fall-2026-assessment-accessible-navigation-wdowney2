@@ -16,9 +16,9 @@
 </head>
 
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a><!--skip link-->
 
   <header>
-    <a href="#main-content" class="skip-to-content">Skip to content</a><!--skip link-->
     <div class="inner-container">
 
       <!-- Logo -->
@@ -36,114 +36,121 @@
 
       <!-- Main navigation starts here -->
 
-      <ul>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
 
-        <!-- Paints -->
-        <li>
-          <a href="#">Paints</a>
-          <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-          <ul>
-            <li><a href="#">Oil Paints</a></li>
-
-            <li>
-              <a href="#">Acrylic Paints</a>
+          <!-- Paints -->
+          <li class="nav-item">
+            <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="mega-paints">
+              Paints
               <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9" />
               </svg>
+            </button>
 
-              <ul>
-                <li><a href="#">Heavy Body Acrylics</a></li>
-                <li><a href="#">Soft Body Acrylics</a></li>
-                <li><a href="#">Fluid Acrylics</a></li>
-                <li><a href="#">Acrylic Gouache</a></li>
-                <li><a href="#">Open Slow-Dry Acrylics</a></li>
-              </ul>
-            </li>
+            <ul id="mega-paints" class="mega-panel" hidden>
+              <li><a href="#">Oil Paints</a></li>
 
-            <li><a href="#">Watercolours</a></li>
-            <li><a href="#">Gouache</a></li>
-            <li><a href="#">Inks &amp; Drawing Inks</a></li>
-            <li><a href="#">Spray Paints</a></li>
-            <li><a href="#">Mediums &amp; Additives</a></li>
-            <li><a href="#">Gesso &amp; Grounds</a></li>
-          </ul>
-        </li>
+              <li>
+                <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="submenu-acrylic">
+                  Acrylic Paints
+                  <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
 
-        <!-- Drawing -->
+                <ul id="submenu-acrylic">
+                  <li><a href="#">Heavy Body Acrylics</a></li>
+                  <li><a href="#">Soft Body Acrylics</a></li>
+                  <li><a href="#">Fluid Acrylics</a></li>
+                  <li><a href="#">Acrylic Gouache</a></li>
+                  <li><a href="#">Open Slow-Dry Acrylics</a></li>
+                </ul>
+              </li>
 
-        <li>
-          <a href="#">Drawing</a>
-          <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-          <ul>
+              <li><a href="#">Watercolours</a></li>
+              <li><a href="#">Gouache</a></li>
+              <li><a href="#">Inks &amp; Drawing Inks</a></li>
+              <li><a href="#">Spray Paints</a></li>
+              <li><a href="#">Mediums &amp; Additives</a></li>
+              <li><a href="#">Gesso &amp; Grounds</a></li>
+            </ul>
+          </li>
 
+          <!-- Drawing -->
 
-            <li><a href="#">Pencils</a></li>
-            <li><a href="#">Charcoal</a></li>
-            <li><a href="#">Pastels</a></li>
-
-
-            <li>
-              <a href="#">Pens &amp; Markers</a>
-              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-
-              <ul>
-                <li><a href="#">Fine Liners</a></li>
-                <li><a href="#">Brush Pens</a></li>
-                <li><a href="#">Alcohol Markers</a></li>
-                <li><a href="#">Calligraphy Pens</a></li>
-                <li><a href="#">Gel Pens</a></li>
-              </ul>
-            </li>
-
-            <li><a href="#">Sketchbooks</a></li>
-            <li><a href="#">Erasers &amp; Sharpeners</a></li>
-          </ul>
-        </li>
-
-        <!-- Surfaces -->
-        <li><a href="#">Surfaces</a></li>
+          <li class="nav-item">
+            <a href="#">Drawing</a>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+            <ul>
 
 
-        <!-- Tools -->
-        <li>
-          <a href="#">Tools</a>
-          <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-          <ul>
-            <li>
-              <a href="#">Brushes</a>
-              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
+              <li><a href="#">Pencils</a></li>
+              <li><a href="#">Charcoal</a></li>
+              <li><a href="#">Pastels</a></li>
 
-              <ul>
-                <li><a href="#">Oil &amp; Acrylic Brushes</a></li>
-                <li><a href="#">Watercolour Brushes</a></li>
-                <li><a href="#">Fan Brushes</a></li>
-                <li><a href="#">Detail Brushes</a></li>
-                <li><a href="#">Brush Sets</a></li>
-              </ul>
-            </li>
 
-            <li><a href="#">Palette Knives</a></li>
-            <li><a href="#">Easels</a></li>
-            <li><a href="#">Palettes</a></li>
-            <li><a href="#">Drawing Boards &amp; Rulers</a></li>
-            <li><a href="#">Varnishes &amp; Finishes</a></li>
-          </ul>
-        </li>
+              <li>
+                <a href="#">Pens &amp; Markers</a>
+                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
 
-        <li><a href="#">Studio</a></li>
+                <ul>
+                  <li><a href="#">Fine Liners</a></li>
+                  <li><a href="#">Brush Pens</a></li>
+                  <li><a href="#">Alcohol Markers</a></li>
+                  <li><a href="#">Calligraphy Pens</a></li>
+                  <li><a href="#">Gel Pens</a></li>
+                </ul>
+              </li>
 
-        <li><a href="#">Sale</a></li>
-      </ul>
+              <li><a href="#">Sketchbooks</a></li>
+              <li><a href="#">Erasers &amp; Sharpeners</a></li>
+            </ul>
+          </li>
+
+          <!-- Surfaces -->
+          <li class="nav-item"><a href="#">Surfaces</a></li>
+
+
+          <!-- Tools -->
+          <li class="nav-item">
+            <a href="#">Tools</a>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+            <ul>
+              <li>
+                <a href="#">Brushes</a>
+                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+
+                <ul>
+                  <li><a href="#">Oil &amp; Acrylic Brushes</a></li>
+                  <li><a href="#">Watercolour Brushes</a></li>
+                  <li><a href="#">Fan Brushes</a></li>
+                  <li><a href="#">Detail Brushes</a></li>
+                  <li><a href="#">Brush Sets</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#">Palette Knives</a></li>
+              <li><a href="#">Easels</a></li>
+              <li><a href="#">Palettes</a></li>
+              <li><a href="#">Drawing Boards &amp; Rulers</a></li>
+              <li><a href="#">Varnishes &amp; Finishes</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="#">Studio</a></li>
+
+          <li class="nav-item"><a href="#">Sale</a></li>
+        </ul>
+      </nav>
 
       <!-- Nav actions: cart, search, hamburger -->
       <div class="nav-actions">
