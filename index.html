@@ -79,26 +79,27 @@
 
           <!-- Drawing -->
 
-          <!-- <li class="nav-item nav-drawing">
-            <a href="#">Drawing</a>
-            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-            <ul>
-
-
+          <li class="nav-item nav-drawing">
+            <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="mega-drawing">
+              <span>Drawing</span>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <ul id="mega-drawing" class="mega-panel" hidden>
               <li><a href="#">Pencils</a></li>
               <li><a href="#">Charcoal</a></li>
               <li><a href="#">Pastels</a></li>
 
-
               <li>
-                <a href="#">Pens &amp; Markers</a>
-                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
+                <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="submenu-pens">
+                  <span>Pens &amp; Markers</span>
+                  <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
 
-                <ul>
+                <ul id="submenu-pens" hidden>
                   <li><a href="#">Fine Liners</a></li>
                   <li><a href="#">Brush Pens</a></li>
                   <li><a href="#">Alcohol Markers</a></li>
@@ -110,26 +111,30 @@
               <li><a href="#">Sketchbooks</a></li>
               <li><a href="#">Erasers &amp; Sharpeners</a></li>
             </ul>
-          </li> -->
+          </li>
 
           <!-- Surfaces -->
-          <!-- <li class="nav-item nav-surfaces"><a href="#">Surfaces</a></li> -->
+          <li class="nav-item nav-surfaces"><a href="#">Surfaces</a></li>
 
 
           <!-- Tools -->
-          <!-- <li class="nav-item nav-tools">
-            <a href="#">Tools</a>
-            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-            <ul>
+          <li class="nav-item nav-tools">
+            <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="mega-tools">
+              <span>Tools</span>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <ul id="mega-tools" class="mega-panel" hidden>
               <li>
-                <a href="#">Brushes</a>
-                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
+                <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="submenu-brushes">
+                  <span>Brushes</span>
+                  <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
 
-                <ul>
+                <ul id="submenu-brushes" hidden>
                   <li><a href="#">Oil &amp; Acrylic Brushes</a></li>
                   <li><a href="#">Watercolour Brushes</a></li>
                   <li><a href="#">Fan Brushes</a></li>
@@ -148,7 +153,7 @@
 
           <li class="nav-item nav-studio"><a href="#">Studio</a></li>
 
-          <li class="nav-item nav-sale"><a href="#">Sale</a></li> -->
+          <li class="nav-item nav-sale"><a href="#">Sale</a></li>
         </ul>
       </nav>
 
