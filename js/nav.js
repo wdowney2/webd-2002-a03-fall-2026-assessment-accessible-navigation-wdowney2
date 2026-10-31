@@ -36,12 +36,21 @@
             }
         });
 
-        item.addEventListener("keydown", (event) => {
-            if (event.key === "Escape" && trigger.getAttribute("aria-expanded") === "true") {
-                setOpen(trigger, panel, false);
-                trigger.focus();
-            }
-        });
+        if (item) {
+            item.addEventListener("keydown", (event) => {
+                if (event.key === "Escape" && trigger.getAttribute("aria-expanded") === "true") {
+                    setOpen(trigger, panel, false);
+                    trigger.focus();
+                }
+            });
+        } else if (trigger.getAttribute("aria-controls") === "main-nav") {
+            trigger.addEventListener("keydown", (event) => {
+                if (event.key === "Escape" && trigger.getAttribute("aria-expanded") === "true") {
+                    setOpen(trigger, panel, false);
+                    trigger.focus();
+                }
+            });
+        }
     }
 
     triggers.forEach((trigger) => initDisclosure(trigger, panelFor(trigger)));
@@ -51,6 +60,7 @@
         triggers.forEach((trigger) => {
             const panel = panelFor(trigger);
             const clickedOutside = !trigger.contains(event.target) && !panel.contains(event.target);
+            console.log(`Clicked outside = ${clickedOutside} for trigger/panel id ${trigger.getAttribute("aria-controls")}`);
             if (clickedOutside && trigger.getAttribute("aria-expanded") === "true") {
                 setOpen(trigger, panel, false);
             }

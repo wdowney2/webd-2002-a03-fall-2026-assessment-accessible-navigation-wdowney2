@@ -25,11 +25,18 @@ header svg {
    fill: #efefef;
 }
 
-ul {
+/** ––– Menu ––– **/
+
+.nav-list {
    display: flex;
+   flex-direction: column;
 }
 
-ul ul {
+.mega-panel {
+   display: none;
+}
+
+.mega-panel:not([hidden]) {
    display: flex;
    flex-direction: column;
 }
