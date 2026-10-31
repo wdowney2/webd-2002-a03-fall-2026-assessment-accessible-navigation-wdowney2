@@ -124,7 +124,7 @@ header {
 }
 
 /* Flex row: logo | main-menu (desktop) | nav-actions */
-header > .inner-container {
+header>.inner-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -155,12 +155,29 @@ header > .inner-container {
   border-radius: 2px;
 }
 
-.logo-bars span:nth-child(1) { background: #E8174B; }
-.logo-bars span:nth-child(2) { background: #FF7A00; }
-.logo-bars span:nth-child(3) { background: #FFB800; }
-.logo-bars span:nth-child(4) { background: #00A86B; }
-.logo-bars span:nth-child(5) { background: #0077FF; }
-.logo-bars span:nth-child(6) { background: #8B2BE2; }
+.logo-bars span:nth-child(1) {
+  background: #E8174B;
+}
+
+.logo-bars span:nth-child(2) {
+  background: #FF7A00;
+}
+
+.logo-bars span:nth-child(3) {
+  background: #FFB800;
+}
+
+.logo-bars span:nth-child(4) {
+  background: #00A86B;
+}
+
+.logo-bars span:nth-child(5) {
+  background: #0077FF;
+}
+
+.logo-bars span:nth-child(6) {
+  background: #8B2BE2;
+}
 
 .logo-text {
   font-family: var(--font-display);
@@ -191,8 +208,10 @@ header > .inner-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;   /* 44px */
-  height: 2.75rem;  /* 44px */
+  width: 2.75rem;
+  /* 44px */
+  height: 2.75rem;
+  /* 44px */
   color: rgba(255, 255, 255, 0.65);
   border-radius: 2px;
   position: relative;
@@ -227,7 +246,8 @@ header > .inner-container {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  width: 2.75rem;   /* 44px */
+  width: 2.75rem;
+  /* 44px */
   height: 2.75rem;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 2px;
@@ -249,7 +269,7 @@ header > .inner-container {
 }
 
 /* Chevron colour in sub-menus */
-.sub-menu > li > .sub-trigger .chevron {
+.sub-menu>li>.sub-trigger .chevron {
   color: rgba(255, 255, 255, 0.4);
 }
 
@@ -279,7 +299,7 @@ main {
   padding: 4rem 0;
 }
 
-.hero > .inner-container {
+.hero>.inner-container {
   max-width: 40rem;
 }
 
@@ -332,16 +352,33 @@ footer {
   height: 6px;
 }
 
-.footer-bar > div {
+.footer-bar>div {
   flex: 1;
 }
 
-.footer-bar > div:nth-child(1) { background: var(--red); }
-.footer-bar > div:nth-child(2) { background: var(--orange); }
-.footer-bar > div:nth-child(3) { background: var(--yellow); }
-.footer-bar > div:nth-child(4) { background: var(--green); }
-.footer-bar > div:nth-child(5) { background: var(--blue); }
-.footer-bar > div:nth-child(6) { background: var(--purple); }
+.footer-bar>div:nth-child(1) {
+  background: var(--red);
+}
+
+.footer-bar>div:nth-child(2) {
+  background: var(--orange);
+}
+
+.footer-bar>div:nth-child(3) {
+  background: var(--yellow);
+}
+
+.footer-bar>div:nth-child(4) {
+  background: var(--green);
+}
+
+.footer-bar>div:nth-child(5) {
+  background: var(--blue);
+}
+
+.footer-bar>div:nth-child(6) {
+  background: var(--purple);
+}
 
 footer .inner-container {
   display: flex;
@@ -365,7 +402,7 @@ footer .inner-container {
   color: var(--logo-yellow);
 }
 
-footer .inner-container > p:last-child {
+footer .inner-container>p:last-child {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.45);
 }
@@ -389,7 +426,7 @@ footer .inner-container > p:last-child {
 
 
 @media (min-width: 1024px) {
-  footer > .inner-container {
+  footer>.inner-container {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
